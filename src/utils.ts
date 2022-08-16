@@ -1,7 +1,7 @@
 import { Context } from "grammy";
 import LRUCache from "lru-cache";
 
-const cache = new LRUCache<number, boolean>({ max: 100, maxAge: 60 * 1000 });
+const cache = new LRUCache<number, boolean>({ max: 100, ttl: 60 * 1000 });
 
 export const getBotRights = async (ctx: Context) => {
   if(!ctx.chat){

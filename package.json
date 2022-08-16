@@ -1,5 +1,5 @@
 {
-  "name": "only-custom-emoji-tg-bot",
+  "name": "only-media-tg-bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skrylnikov/only-custom-emoji-tg-bot.git"
+    "url": "git+https://github.com/skrylnikov/only-media-tg-bot.git"
   },
   "author": "Dmitriy Skrylnikov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/skrylnikov/only-custom-emoji-tg-bot/issues"
+    "url": "https://github.com/skrylnikov/only-media-tg-bot/issues"
   },
-  "homepage": "https://github.com/skrylnikov/only-custom-emoji-tg-bot#readme",
+  "homepage": "https://github.com/skrylnikov/only-media-tg-bot#readme",
   "devDependencies": {
     "@types/node": "^16.11.49",
     "tsx": "^3.8.2",

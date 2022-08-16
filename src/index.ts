@@ -7,7 +7,7 @@ import { getBotRights } from './utils';
 
 const bot = new Bot(token);
 
-bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
+bot.command("start", (ctx) => ctx.reply("Добавь меня в чат, выдай мне права на удаление сообщений, и я буду тереть всё кроме медиа и кастомных эмодзи!"));
 
 bot.on(["msg:text", "edit:text", ":media"], async (ctx) => {
   const myRights = await getBotRights(ctx);
@@ -39,7 +39,11 @@ bot.on(["msg:text", "edit:text", ":media"], async (ctx) => {
   }
 });
 
-bot.on(":new_chat_members:me", (ctx) => ctx.reply("Выдай мне права на удаление сообщений, и я буду тереть всё кроме медиа и кастомных эмодзи!"));
+bot.on(":new_chat_members:me", (ctx) => {
+  console.log(`Added to chat ${ctx.chat.id} ${'title' in ctx.chat ? ctx.chat.title : ''}`);
+  
+  ctx.reply("Выдай мне права на удаление сообщений, и я буду тереть всё кроме медиа и кастомных эмодзи!");
+});
 
 bot.catch((err) => console.error(err));
 
